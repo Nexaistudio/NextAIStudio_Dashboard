@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Creative AI Platform Design System - Dark theme optimized with glassmorphism 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark theme primary colors */
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+
+    /* Glass cards with subtle transparency */
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 95%;
+    --glass: 222 47% 8% / 0.8;
+    --glass-border: 210 40% 98% / 0.1;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 95%;
+
+    /* AI Platform brand accent - #79E7C3 */
+    --primary: 162 70% 70%;
+    --primary-foreground: 222 47% 11%;
+    --primary-glow: 162 70% 80%;
+
+    /* Secondary with purple tones for AI theme */
+    --secondary: 255 47% 15%;
+    --secondary-foreground: 210 40% 95%;
+
+    /* Muted backgrounds */
+    --muted: 222 47% 10%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent using the primary brand color */
+    --accent: 162 70% 70%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders with glass effect */
+    --border: 210 40% 98% / 0.1;
+    --input: 222 47% 12%;
+    --ring: 162 70% 70%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar colors for glass theme */
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 162 70% 70%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 222 47% 10%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 210 40% 98% / 0.1;
+    --sidebar-ring: 162 70% 70%;
+
+    /* AI Platform specific tokens */
+    --gradient-ai: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--glass)), hsl(var(--card)));
+    --gradient-bg: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-glass: 0 8px 32px 0 hsla(210, 40%, 98%, 0.05);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
